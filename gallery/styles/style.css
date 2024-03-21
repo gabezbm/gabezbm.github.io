@@ -1,0 +1,68 @@
+@import url("../../frameworks/framework.css");
+
+#photo-gallery {
+    position: absolute;
+    top: 4rem;
+    padding: 1rem 10%;
+}
+
+#heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+#heading span {
+    color: var(--highlight-color);
+    font-weight: bold;
+}
+
+#photos {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+#photos>.photo {
+    flex: 1 1 auto;
+    height: 250px;
+    position: relative;
+}
+
+#photos::after {
+    content: "";
+    flex-grow: 1000;
+}
+
+#photos>.photo img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+#photos>.photo>.photo-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color-transparent);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: 0.2s;
+}
+
+#photos>.photo>.photo-description>p {
+    color: var(--text-color);
+    text-align: center;
+    padding: 15%;
+}
+
+#photos>.photo:hover>.photo-description {
+    transform: scale(1);
+}

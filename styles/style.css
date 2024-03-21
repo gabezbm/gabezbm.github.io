@@ -1,0 +1,53 @@
+@import url("../frameworks/framework.css");
+
+#info-container {
+    width: 60vw;
+    text-align: center;
+}
+
+#avatar img {
+    margin-top: 2rem;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+#main-info {
+    margin: 1rem;
+}
+
+#main-info h1 {
+    color: var(--highlight-color);
+    transition: var(--transition);
+}
+
+#main-info h2,
+p {
+    font-weight: normal;
+    letter-spacing: 0.04em;
+    margin: 1rem auto;
+}
+
+#contact-info {
+    margin-bottom: 2rem;
+}
+
+#contact-info h3 {
+    font-weight: 500;
+}
+
+#contact-links {
+    margin-top: 0.5rem;
+}
+
+#contact-links i {
+    margin: 0 0.2em;
+    font-size: 30px;
+    color: var(--clickable-color);
+    transition: var(--transition);
+}
+
+#contact-links i:hover {
+    color: var(--clickable-hover-color);
+}
